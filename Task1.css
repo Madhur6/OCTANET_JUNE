@@ -6,7 +6,7 @@
 }
 
 body {
-    background: lightpink;
+    background: rgba(163, 83, 166, 0.685);
     color: #fff;
 }
 
@@ -24,7 +24,7 @@ body {
 
 .logo {
     position: relative;
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 700;
     text-decoration: none;
     color: Snow;
@@ -36,7 +36,7 @@ body {
 }
 
 .navbar a {
-    font-size: 16px
+    font-size: 25px;
     font-weight: bold;
     color: Snow;
     text-decoration: none;
@@ -54,8 +54,6 @@ body {
 
 
 .home {
-    background: url('pexels.jpg') no-repeat;
-    background-size: ;
     height: 100vh;
     padding: 0 10%;
     display: flex;
@@ -68,7 +66,7 @@ body {
 }
 
 .home-content h1 {
-    font-size: 60px;
+    font-size: 75px;
     font-weight: 700;
     transition: .4s;
 }
@@ -92,7 +90,7 @@ body {
 .home-content .box {
     background: transparent;
     height: 60px;
-    width: 330px;
+    width: 430px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +99,7 @@ body {
 
 .home-content .box a {
     border: 2px solid white;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: 600;
     border-radius: 15px;
     padding: 12px;
@@ -145,15 +143,15 @@ body {
 
 
 .card {
-    margin-left: 100px;
+    margin-left: 30%;
     position: relative;
-    width: 220px;
-    height: 320px;
+    width: 330px;
+    height: 425px;
     background: lightpink;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 45px;
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
@@ -168,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     background-color: peachpuff;
     transition: all 0.5s;
@@ -196,7 +194,7 @@ body {
 
 .card:hover::after {
     content: "Visit Again!";
-    background-color: rosybrown;
+    background-color: rgba(163, 83, 166, 0.685);
 }
 
 
