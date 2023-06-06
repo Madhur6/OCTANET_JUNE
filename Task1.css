@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Anamatic sc', cursive, sans-sarif;
+}
+
+body {
+    background: lightpink;
+    color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 36px 10%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: Snow;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* making it mobile suitable*/
+}
+
+.navbar a {
+    font-size: 16px
+    font-weight: bold;
+    color: Snow;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: peachpuff;
+}
+
+.navbar a:nth-child(1) {
+    color: peachpuff;
+}
+
+
+.home {
+    background: url('pexels.jpg') no-repeat;
+    background-size: ;
+    height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    color: Snow;
+}
+
+.home-content{
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    transition: .4s;
+}
+
+.home-content h3 {
+    font-size: 33px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.home-content p {
+    font-size: 19px;
+    margin: 20px 0 40px;
+    transition: .6s;
+}
+
+.home-content h1:hover, h3:hover, p:hover {
+    color: peachpuff;
+}
+
+.home-content .box {
+    background: transparent;
+    height: 60px;
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.home-content .box a {
+    border: 2px solid white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 10px;
+    text-decoration: none;
+    background: transparent;
+    color: Snow;
+    transition: .7s;
+}
+
+.home-content .box a:hover{
+    background: peachpuff;
+    color: rosybrown;
+}
+
+.social {
+    position: absolute;
+    bottom: 60px;
+    width: 240px;
+    height: 30px;
+}
+
+.social a {
+    position: relative;
+    font-size: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-flex;
+    padding: 10px;
+    margin-right: 20px;
+    transition: .3s ease;
+    color: lightpink;
+}
+
+.social a:hover {
+    background: peachpuff;
+}
+
+
+
+.card {
+    margin-left: 100px;
+    position: relative;
+    width: 220px;
+    height: 320px;
+    background: lightpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: peachpuff;
+    transition: all 0.5s;
+}
+
+.card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card:hover::before,
+.card:hover::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card:hover::after {
+    content: "Visit Again!";
+    background-color: rosybrown;
+}
+
+
+
+/* making it tablet suitable*/
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 12px;
+    margin: 3px;
+  }
+
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .home-content .box a {
+    font-size: 12px;
+    padding: 8px;
+    margin: 3px;
+  }
+
+  .social a {
+    font-size: 18px;
+    padding: 8px;
+    margin: 3px;
+  }
+
+  .card {
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: 150px;
+    font-size: 16px;
+  }
+
+  .card::before,
+  .card::after {
+    font-size: 16px;
+  }
+}
+
+
+/* making it mobile suitable*/
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .home-content h1 {
+    font-size: 24px;
+  }
+
+  .home-content h3 {
+    font-size: 18px;
+  }
+
+  .home-content p {
+    font-size: 12px;
+  }
+
+  .home-content .box {
+    max-width: 100%;
+  }
+
+  .home-content .box a {
+    font-size: 10px;
+    padding: 8px;
+    margin: 3px;
+  }
+
+  .social a {
+    font-size: 16px;
+    padding: 8px;
+    margin: 3px;
+  }
+
+  .card {
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: 120px;
+    font-size: 14px;
+  }
+
+  .card::before,
+  .card::after {
+    font-size: 14px;
+  }
+}
