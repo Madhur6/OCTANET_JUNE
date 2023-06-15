@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&family=Satisfy&display=swap" rel="stylesheet">
+    <title>hello.</title>
+    <link rel="stylesheet" href="Task2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo">
+            <h2> To-do list </h2>
+            <div class="row">
+                <input type="text" id="input-box" autofocus placeholder="Add a task">
+                <button onclick="addTask()"> Add </button>
+            </div>
+            <ul id="list">
+                <li class="checked"> Task 1</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("input-box");
+            const list = document.getElementById("list");
+
+            if (input.value === '') {
+                alert("You must write something!");
+            } else {
+                let li = document.createElement("li");
+                li.innerHTML = input.value;
+                list.append(li);
+                let span = document.createElement("span");
+                span.innerHTML = "\u00d7";
+                li.appendChild(span);
+            }
+
+            input.value = "";
+            saveData();
+        }
+
+        function saveData() {
+            const list = document.getElementById("list");
+            localStorage.setItem("data", list.innerHTML);
+        }
+
+        function showTask() {
+            const list = document.getElementById("list");
+            list.innerHTML = localStorage.getItem("data");
+        }
+
+        document.getElementById("list").addEventListener("click", function(e) {
+            if (e.target.tagName === "LI") {
+                e.target.classList.toggle("checked");
+            } else if (e.target.tagName === "SPAN") {
+                e.target.parentElement.remove();
+            }
+        });
+
+        showTask();
+    </script>
+</body>
+</html>
