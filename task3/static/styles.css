@@ -1,0 +1,100 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.card-logos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-logos img {
+    width: 30px; /* Adjust the width as needed */
+    opacity: 1; /* Adjust the opacity to achieve the desired blending effect */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+body{
+    background:linear-gradient(to top, rgba(255, 0, 0, 0.2) 5%, #FFFFFF);
+}
+
+main{
+    height:100vh;
+}
+
+.history, .index {
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.history, .index th,td{
+    border: 2px solid #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+#Add_logo, #index_logo, #history_logo{
+    font-size: 27px;
+    margin-bottom: 36px;
+    font-family: Satisfy;
+}
+
+.indextr:nth-child(even), .historytr:nth-child(even){
+    background-color: lightpink;
+}
+
+
+#rusername, #rpassword, #rconfirmation, #mb-3, #quote1, #buysymbol, #buyshares, #sellshares, #sellselect, #addcash{
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 6px;
+    transition: .9s ease;
+}
+
+#rusername:focus, #rpassword:focus, #rconfirmation:focus, #mb-3:focus, #quote1:focus, #buysymbol:focus, #buyshares:focus, #sellshares:focus, #sellselect:focus, #addcash:focus{
+    outline: none;
+    border: 3px solid peachpuff;
+}
+
+#rsubmit, #mt-3, #quote2, #buybutton, #sellbutton, #addbutton{
+    border-radius: 9px;
+    padding: 6px;
+    background: slategray;
+    border-style: none;
+    font-size: 15px;
+    transition: .6s ease;
+    color: white;
+}
+
+#rsubmit:hover, #mt-3:hover, #quote2:hover, #buybutton:hover, #sellbutton:hover, #addbutton:hover{
+    background: peachpuff;
+}

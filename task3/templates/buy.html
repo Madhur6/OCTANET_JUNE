@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    stock buy
+{% endblock %}
+
+{% block main %}
+    <h1 id="history_logo" > Buy New Stocks </h1>
+    <form action="/buy" method="post">
+        <div >
+            <input id="buysymbol" type="text" name="symbol" autofocus autocomplete = "off" placeholder="type in stock symbol">
+        </div>
+        <div >
+            <input id="buyshares" type="number" min="1" name="shares" autocomplete="off" placeholder="number of shares">
+        </div>
+        <input id="buybutton" type="submit" value="BUY">
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach(function(input) {
+                input.addEventListener('focus', function() {
+                    input.style.border = '3px solid springgreen'; /* Apply custom border style */
+                });
+                input.addEventListener('blur', function() {
+                    input.style.border = ''; /* Remove custom border style on blur */
+                });
+            });
+        });
+    </script>
+{% endblock %}

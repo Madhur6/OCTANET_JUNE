@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+    <h1 id="history_logo" > Transactions history  </h1>
+    <table class="history">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th scope="col"> symbols </th>
+                <th> shares </th>
+                <th> price </th>
+                <th> date </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr class="historytr">
+                <td> {{transaction["name"]}} </td>
+                <td> {{transaction["symbol"]}} </td>
+                <td> {{transaction["shares"]}} </td>
+                <td> {{transaction["price"]}} </td>
+                <td> {{transaction["date"]}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

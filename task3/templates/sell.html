@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    sell stocks
+{% endblock %}
+
+{% block main %}
+    <h1 id="history_logo" > Sell-Stocks  </h1>
+    <form action="/sell" method="post">
+        <select id="sellselect" name="symbol">
+            <option disabled selected hidden>select</option>
+            {% for symbol in symbols %}
+            <option value="{{symbol}}"> {{symbol}} </option>
+            {% endfor %}
+        </select>
+        <input id="sellshares" type="number" name="shares" min="1" placeholder="type in shares">
+        <input style="margin-left: 6px;" id="sellbutton" type="submit" value="sell">
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach(function(input) {
+                input.addEventListener('focus', function() {
+                    input.style.border = '3px solid springgreen'; /* Apply custom border style */
+                });
+                input.addEventListener('blur', function() {
+                    input.style.border = ''; /* Remove custom border style on blur */
+                });
+            });
+        });
+    </script>
+{% endblock %}

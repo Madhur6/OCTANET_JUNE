@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    portfolio
+{% endblock %}
+
+{% block main %}
+    <h1 id="index_logo"> YOUR INDEX </h1>
+    <table class="index">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Shares </th>
+                <th> price </th>
+                <th> current_price </th>
+                <th> TOTAL </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for transaction in transactions %}
+            <tr class="indextr">
+                <td> {{transaction["symbol"]}} </td>
+                <td> {{transaction["shares"]}} </td>
+                <td> {{transaction["price"]|usd}} </td>
+                <td> {{transaction["current_price"]|usd}} </td>
+                <td> {{transaction["total"]|usd}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <th> CASH </th>
+                <td> {{user_cash|usd}} </td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <th> TOTAL </th>
+                <td> {{TOTAL|usd}} </td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

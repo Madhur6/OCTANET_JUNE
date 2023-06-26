@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    stock qoute
+{% endblock %}
+
+{% block main %}
+    <h1 id="history_logo" > Stock-Quotes </h1>
+    <form action="/quote" method="post">
+        <div >
+            <input id="quote1" type="text" name="symbol" autofocus autocomplete="off" placeholder="search for stock quote">
+        </div>
+        <input id="quote2" type="submit" value="search">
+    </form>
+{% endblock %}
